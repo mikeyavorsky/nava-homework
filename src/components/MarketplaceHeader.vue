@@ -11,6 +11,7 @@ header {
   background: #25447c;
   color: white;
   width: 100%;
+  min-width: min-content;
   padding: 2.5rem 4rem 2rem 0;
 }
 

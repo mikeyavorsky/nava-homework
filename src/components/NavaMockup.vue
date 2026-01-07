@@ -41,11 +41,6 @@ const household = ref([
   overflow: visible;
 }
 
-#main :deep(h1, h2, h3) {
-  word-wrap: break-word;
-  white-space: normal;
-}
-
 #main > :deep(*) {
   padding-left: 4rem;
 }
