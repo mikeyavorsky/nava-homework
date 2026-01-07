@@ -10,11 +10,9 @@ const props = defineProps({
 
 <template>
   <div class="flex-column tile tile-border">
-    <RowWrap>
-      <h3>{{ props.name }}</h3>
-    </RowWrap>
-    <RowWrap><strong>Description:</strong> {{ props.description }}</RowWrap>
-    <RowWrap><strong>Favorite fruit:</strong> {{ props.fruit }}</RowWrap>
+    <h3>{{ props.name }}</h3>
+    <span><strong>Description:</strong> {{ props.description }}</span>
+    <span><strong>Favorite fruit:</strong> {{ props.fruit }}</span>
   </div>
 </template>
 
@@ -34,10 +32,16 @@ const props = defineProps({
 }
 
 h3 {
+  font-weight: 800;
   margin: 0 0 1rem 0;
 }
 
 strong {
+  font-weight: 700;
   margin: 0 0.125rem 0.5rem 0;
+}
+
+span {
+  margin-bottom: 0.5rem;
 }
 </style>

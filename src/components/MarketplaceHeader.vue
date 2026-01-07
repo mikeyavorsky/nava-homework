@@ -12,10 +12,12 @@ header {
   color: white;
   width: 100%;
   min-width: min-content;
-  padding: 2.5rem 4rem 2rem 0;
+  padding: 2.5rem 4rem 1.5rem 0;
 }
 
 h1 {
   margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
 }
 </style>

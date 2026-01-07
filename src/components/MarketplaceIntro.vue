@@ -16,5 +16,6 @@ const count = ref(0);
 <style scoped>
 h2 {
   font-size: 1.5rem;
+  font-weight: 800;
 }
 </style>

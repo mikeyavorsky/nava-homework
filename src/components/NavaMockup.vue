@@ -21,7 +21,7 @@ const household = ref([
 </script>
 
 <template>
-  <div id="main">
+  <main>
     <MarketplaceHeader />
     <MarketplaceIntro />
     <RowWrap>
@@ -33,15 +33,15 @@ const household = ref([
     </RowWrap>
     <MarketplaceActions />
     <div><MarketplaceButton> </MarketplaceButton></div>
-  </div>
+  </main>
 </template>
 
 <style scoped>
-#main {
+main {
   overflow: visible;
 }
 
-#main > :deep(*) {
+main > :deep(*) {
   padding-left: 4rem;
 }
 </style>
