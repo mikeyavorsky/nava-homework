@@ -2,7 +2,7 @@
 import MarketplaceHeader from "./MarketplaceHeader.vue";
 import MarketplaceIntro from "./MarketplaceIntro.vue";
 import MarketplaceTile from "./MarketplaceTile.vue";
-import MarketplaceButton from "./MarketplaceButton.vue";
+import MemberForm from "./MemberForm.vue";
 import RowWrap from "./RowWrap.vue";
 import { ref } from "vue";
 
@@ -18,21 +18,28 @@ const household = ref([
     fruit: "Apple",
   },
 ]);
+
+const handleAddMember = ({ name, description, fruit }) => {
+  household.value.push({
+    name,
+    description,
+    fruit,
+  });
+};
 </script>
 
 <template>
   <main>
     <MarketplaceHeader />
     <MarketplaceIntro />
-    <RowWrap>
+    <RowWrap aria-live="polite">
       <MarketplaceTile
         v-for="member in household"
         :key="member.name"
         v-bind="member"
       />
     </RowWrap>
-    <MarketplaceActions />
-    <div><MarketplaceButton> </MarketplaceButton></div>
+    <MemberForm @add-member="handleAddMember" />
   </main>
 </template>
 
@@ -42,6 +49,14 @@ main {
 }
 
 main > :deep(*) {
-  padding-left: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 420px) {
+  main > :deep(*) {
+    padding-left: 4rem;
+    padding-right: initial;
+  }
 }
 </style>
